@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="uk" data-theme="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>HDA — особисті додатки</title>
+    <meta
+      name="description"
+      content="HDA — ім’я видавця особистих додатків. Не компанія і не студія. Keepbay, Capsa і наступні додатки живуть тут."
+    />
+    <meta name="theme-color" content="#253139" />
+    <meta property="og:title" content="HDA" />
+    <meta
+      property="og:description"
+      content="Особисті додатки під ім’ям HDA. Не компанія, не студія — лише видавець у магазині. Keepbay і Capsa."
+    />
+    <meta property="og:type" content="website" />
+    <link rel="icon" href="assets/hda-mark.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body class="page-v2" data-page="hub">
+    <a class="skip" href="#main">Skip</a>
+    <div class="parallax-scene" aria-hidden="true">
+      <div class="orb orb-a" data-parallax="0.22"></div>
+      <div class="orb orb-b" data-parallax="0.08"></div>
+      <div class="orb orb-c" data-parallax="0.32"></div>
+    </div>
+    <header class="site-header">
+      <div class="wrap header-inner">
+        <a class="brand" href="index.html" aria-label="HDA">
+          <img src="assets/hda-mark.svg" alt="" />
+          <span>HD<span class="bay">A</span></span>
+        </a>
+        <nav class="nav-links" aria-label="Primary">
+          <a href="#apps" data-i18n="hub.apps">Додатки</a>
+          <a href="#about" data-i18n="hub.about">Про HDA</a>
+        </nav>
+        <div class="header-actions">
+          <button class="lang-btn" id="lang-toggle" type="button" aria-label="Language">EN</button>
+          <button class="icon-btn" id="theme-toggle" type="button" aria-label="Theme"></button>
+          <button class="menu-btn" id="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="Menu">
+            <span class="menu-bars" aria-hidden="true"><span></span><span></span><span></span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+    <div class="menu-backdrop" id="menu-backdrop"></div>
+    <nav class="mobile-nav" id="mobile-nav" aria-hidden="true">
+      <a href="#apps" data-i18n="hub.apps">Додатки</a>
+      <a href="#about" data-i18n="hub.about">Про HDA</a>
+      <a href="keepbay/index.html">Keepbay</a>
+      <a href="capsa/index.html">Capsa</a>
+    </nav>
+
+    <main id="main">
+      <section class="hero hub-hero">
+        <div class="wrap">
+          <div class="hero-copy hero-enter">
+            <p class="eyebrow" data-i18n="hub.eyebrow">Особисті додатки</p>
+            <h1 data-i18n="hub.title">Додатки під ім’ям HDA.</h1>
+            <p class="lead" data-i18n="hub.lead">
+              HDA — не компанія і не студія. Це просто ім’я видавця в магазинах, те саме, що в адресі пошти. Тут живуть сторінки додатків.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="apps">
+        <div class="wrap">
+          <div class="section-head reveal">
+            <h2 data-i18n="hub.appsTitle">Додатки</h2>
+            <p data-i18n="hub.appsLead">Keepbay і Capsa вже мають сторінки. Інші з’являться тут, коли будуть готові.</p>
+          </div>
+          <div class="app-grid">
+            <a class="app-card reveal" href="keepbay/index.html">
+              <img src="assets/keepbay-mark.svg" alt="" />
+              <h3>Keepbay</h3>
+              <p data-i18n="hub.keepbayBody">Офлайн-облік авто, витрат, поїздок і нагадувань. Android незабаром, iPhone пізніше.</p>
+              <span class="app-card-cta" data-i18n="hub.keepbayCta">Сторінка додатку</span>
+            </a>
+            <a class="app-card is-capsa reveal" href="capsa/index.html" style="--d: 0.06s">
+              <img src="assets/capsa-mark.svg" alt="" />
+              <h3>Capsa</h3>
+              <p data-i18n="hub.capsaBody">Локальний трекер часу для проєктів, задач і заробітку в гривнях. Windows незабаром, macOS і Linux пізніше.</p>
+              <span class="app-card-cta" data-i18n="hub.capsaCta">Сторінка додатку</span>
+            </a>
+            <article class="app-card is-soon reveal" style="--d: 0.12s">
+              <h3 data-i18n="hub.soonTitle">Інші додатки</h3>
+              <p data-i18n="hub.soonBody">Мобільні й десктопні. Тут будуть окремі сторінки — без вигаданих назв, поки продукт не готовий.</p>
+              <span class="app-card-cta" data-i18n="hub.soonCta">З’являться тут</span>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="about">
+        <div class="wrap">
+          <div class="privacy-strip reveal">
+            <div>
+              <h2 data-i18n="hub.aboutTitle">Чому просто HDA</h2>
+              <p data-i18n="hub.aboutBody">
+                Немає ТОВ, ФОП у шапці сайту і «студії». HDA — позначка видавця: так зручніше тримати кілька додатків в одному місці. Юридичні тексти й політика — на сторінці конкретного додатку.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap footer-inner">
+        <div>
+          <strong>HDA</strong>
+          <div data-i18n="hub.footerNote">Ім’я видавця, не зареєстрована компанія.</div>
+        </div>
+        <div class="footer-links">
+          <a href="keepbay/index.html">Keepbay</a>
+          <a href="capsa/index.html">Capsa</a>
+          <a href="keepbay/privacy.html" data-i18n="hub.keepbayPrivacy">Keepbay · конфіденційність</a>
+          <a href="capsa/privacy.html" data-i18n="hub.capsaPrivacy">Capsa · конфіденційність</a>
+        </div>
+      </div>
+    </footer>
+    <script src="js/main.js"></script>
+  </body>
+</html>

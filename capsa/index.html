@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="uk" data-theme="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Capsa — капсула часу</title>
+    <meta
+      name="description"
+      content="HDA - Capsa — локальний десктопний трекер проєктів, задач і заробітку. Дані лишаються на комп’ютері."
+    />
+    <meta name="theme-color" content="#253139" />
+    <meta property="og:title" content="HDA - Capsa" />
+    <meta
+      property="og:description"
+      content="Капсула часу: години, задачі й заробіток у гривнях. Без хмари."
+    />
+    <meta property="og:type" content="website" />
+    <link rel="icon" href="../assets/capsa-mark.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body class="page-v2 page-capsa" data-page="capsa">
+    <a class="skip" href="#main">Skip</a>
+    <div class="parallax-scene" aria-hidden="true">
+      <div class="orb orb-a" data-parallax="0.22"></div>
+      <div class="orb orb-b" data-parallax="0.08"></div>
+      <div class="orb orb-c" data-parallax="0.32"></div>
+    </div>
+    <header class="site-header">
+      <div class="wrap header-inner">
+        <div class="brand-stack">
+          <a class="brand-home" href="../index.html">HDA</a>
+          <a class="brand" href="index.html" aria-label="Capsa">
+            <img src="../assets/capsa-mark.svg" alt="" />
+            <span>Cap<span class="bay">sa</span></span>
+          </a>
+        </div>
+        <nav class="nav-links" aria-label="Primary">
+          <a href="#features" data-i18n="nav.features">Можливості</a>
+          <a href="#faq" data-i18n="nav.faq">Питання</a>
+          <a href="privacy.html" data-i18n="nav.privacy">Конфіденційність</a>
+        </nav>
+        <div class="header-actions">
+          <button class="lang-btn" id="lang-toggle" type="button" aria-label="Language">EN</button>
+          <button class="icon-btn" id="theme-toggle" type="button" aria-label="Theme"></button>
+          <a class="btn btn-gold btn-shine" href="#download" data-i18n="nav.download">Windows</a>
+          <button class="menu-btn" id="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="Menu">
+            <span class="menu-bars" aria-hidden="true"><span></span><span></span><span></span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+    <div class="menu-backdrop" id="menu-backdrop"></div>
+    <nav class="mobile-nav" id="mobile-nav" aria-hidden="true">
+      <a href="../index.html">HDA</a>
+      <a href="#features" data-i18n="nav.features">Можливості</a>
+      <a href="#faq" data-i18n="nav.faq">Питання</a>
+      <a href="privacy.html" data-i18n="nav.privacy">Конфіденційність</a>
+      <a class="btn btn-gold" href="#download" data-i18n="nav.download">Windows</a>
+    </nav>
+
+    <main id="main">
+      <section class="hero">
+        <div class="wrap hero-grid">
+          <div class="hero-copy hero-enter">
+            <p class="eyebrow" data-i18n="hero.eyebrow">Капсула часу</p>
+            <h1 data-i18n="hero.title">Проєкти, години і гривні — на цьому комп’ютері.</h1>
+            <p class="lead" data-i18n="hero.lead">
+              Capsa рахує час локально: профілі, задачі, таймер у треї, помодоро й PDF-репорти. Хмари немає.
+            </p>
+            <div class="hero-cta">
+              <a class="btn btn-gold btn-shine" href="#download" data-i18n="hero.cta">Windows незабаром</a>
+              <a class="btn btn-ghost" href="#features" data-i18n="hero.secondary">Дивитись можливості</a>
+            </div>
+            <p class="hero-note" data-i18n="hero.soon">Спочатку Windows. macOS і Linux — пізніше.</p>
+            <div class="pills" data-i18n-list="hero.pills">
+              <span class="pill">Локально</span>
+              <span class="pill">Windows незабаром</span>
+              <span class="pill">Без хмари</span>
+            </div>
+          </div>
+
+          <div class="desk-stage">
+            <img
+              class="desk desk-float"
+              src="../assets/capsa-home.png"
+              alt="Головне вікно HDA - Capsa"
+              width="1024"
+              height="615"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="features">
+        <div class="wrap">
+          <div class="section-head reveal">
+            <h2 data-i18n="features.title">Години, задачі й заробіток в одному вікні</h2>
+            <p data-i18n="features.lead">
+              Той самий спокій, що в додатку: темний інтерфейс, помаранчевий акцент і база, яка нікуди не їде.
+            </p>
+          </div>
+          <div class="features">
+            <article class="feature reveal" style="--d: 0s">
+              <div class="icon" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <circle cx="12" cy="12" r="8" stroke="currentColor" stroke-width="2" />
+                  <path d="M12 8v4.2L15 14" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                </svg>
+              </div>
+              <h3 data-i18n="features.timer.title">Таймер у треї</h3>
+              <p data-i18n="features.timer.body">
+                Лічильник живе в головному процесі. Вікно можна сховати — сесія не зупиняється. Є острів і окреме міні-вікно.
+              </p>
+            </article>
+            <article class="feature reveal" style="--d: 0.08s">
+              <div class="icon" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <circle cx="9" cy="8" r="3" stroke="currentColor" stroke-width="2" />
+                  <path d="M4 18a5 5 0 0 1 10 0" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                  <path d="M16 11h5M18.5 8.5v5" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                </svg>
+              </div>
+              <h3 data-i18n="features.profiles.title">Профілі і ставки</h3>
+              <p data-i18n="features.profiles.body">
+                Окремі світи роботи: свої проєкти, задачі й ціна години. Усюди гривня. Проєкт може перевизначити ставку профілю.
+              </p>
+            </article>
+            <article class="feature reveal" style="--d: 0.16s">
+              <div class="icon" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <path d="M12 4v8l4 2" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                  <circle cx="12" cy="12" r="8" stroke="currentColor" stroke-width="2" />
+                </svg>
+              </div>
+              <h3 data-i18n="features.focus.title">Фокус і помодоро</h3>
+              <p data-i18n="features.focus.body">
+                Окремий зворотний таймер: робота рахує гроші, фокус тримає ритм. Можна від’єднати острів у плаваюче вікно.
+              </p>
+            </article>
+            <article class="feature reveal" style="--d: 0.24s">
+              <div class="icon" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <rect x="4" y="5" width="16" height="15" rx="3" stroke="currentColor" stroke-width="2" />
+                  <path d="M8 3v4M16 3v4M4 10h16" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                </svg>
+              </div>
+              <h3 data-i18n="features.calendar.title">Календар днів</h3>
+              <p data-i18n="features.calendar.body">
+                Дні, години й суми по проєктах. Пауза при простої, якщо за комп’ютером ніхто не працює.
+              </p>
+            </article>
+            <article class="feature reveal" style="--d: 0.32s">
+              <div class="icon" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <path d="M7 4h10v16H7z" stroke="currentColor" stroke-width="2" />
+                  <path d="M10 8h4M10 12h4M10 16h2" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                </svg>
+              </div>
+              <h3 data-i18n="features.reports.title">Репорти PDF</h3>
+              <p data-i18n="features.reports.body">
+                Прев’ю в додатку і збереження файлу. Зручно віддати клієнту години й нарахування без хмарного акаунта.
+              </p>
+            </article>
+            <article class="feature reveal" style="--d: 0.4s">
+              <div class="icon" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <rect x="5" y="4" width="14" height="16" rx="3" stroke="currentColor" stroke-width="2" />
+                  <path d="M9 9h6M9 13h4" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                </svg>
+              </div>
+              <h3 data-i18n="features.data.title">Дані на диску</h3>
+              <p data-i18n="features.data.body">
+                SQLite на комп’ютері, автокопія поруч. Скріншоти сесії — лише якщо увімкнути, у папку Зображення.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="wrap story">
+          <article class="story-card reveal">
+            <h3 data-i18n="story.timerTitle">Таймер не завмирає разом із вікном</h3>
+            <p data-i18n="story.timerBody">
+              Закриття ховає Capsa в трей. Повний вихід — з меню іконки. Острів коротко підказує простій, щогодинні позначки й норму дня.
+            </p>
+            <img src="../assets/capsa-story-timer.svg" alt="" />
+          </article>
+          <article class="story-card reveal" style="--d: 0.1s">
+            <h3 data-i18n="story.profileTitle">Окремий світ на кожен спосіб заробітку</h3>
+            <p data-i18n="story.profileBody">
+              Профіль тримає свої ставки, проєкти, знімки й репорти. Зручно розділити розробку, дизайн і підробіток.
+            </p>
+            <img src="../assets/capsa-story-profiles.svg" alt="" />
+          </article>
+          <article class="story-card reveal">
+            <h3 data-i18n="story.focusTitle">Помодоро поруч, але не замість роботи</h3>
+            <p data-i18n="story.focusBody">
+              Фокус не дублює робочий таймер. Якщо острів уже крутиться, завершений помодоро не пише другий рядок у історію.
+            </p>
+            <img src="../assets/capsa-story-focus.svg" alt="" />
+          </article>
+          <article class="story-card reveal" style="--d: 0.1s">
+            <h3 data-i18n="story.shotTitle">Знімки екрана — лише за бажанням</h3>
+            <p data-i18n="story.shotBody">
+              Поки таймер іде, Capsa може знімати екран з обраним інтервалом. На паузі кадрів немає. Якщо вимкнути опцію, таймер працює як завжди.
+            </p>
+            <img src="../assets/capsa-story-shots.svg" alt="" />
+          </article>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="wrap">
+          <div class="privacy-strip reveal">
+            <div>
+              <h2 data-i18n="privacy.title">Локально за замовчуванням</h2>
+              <p data-i18n="privacy.body">
+                Записи лишаються в SQLite на цьому комп’ютері. Немає хмарного акаунта і фонової відправки на сторонні сервери.
+              </p>
+            </div>
+            <a class="btn btn-ghost" href="privacy.html" data-i18n="privacy.cta">Політика конфіденційності</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="faq">
+        <div class="wrap">
+          <div class="section-head reveal">
+            <h2 data-i18n="faq.title">Короткі відповіді</h2>
+            <p data-i18n="faq.lead">Так само, як у розділі Довідка в додатку.</p>
+          </div>
+          <div class="faq" data-accordion>
+            <div class="acc is-open reveal">
+              <button class="acc-btn" type="button" aria-expanded="true">
+                <span data-i18n="faq.q1">Де зберігаються дані?</span>
+              </button>
+              <div class="acc-panel">
+                <div class="acc-inner">
+                  <p data-i18n="faq.a1">
+                    У локальній базі SQLite. На Windows це %APPDATA%/Capsa/tracker.db, поруч автокопія tracker.db.bak. Хмарний акаунт не потрібен.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="acc reveal" style="--d: 0.05s">
+              <button class="acc-btn" type="button" aria-expanded="false">
+                <span data-i18n="faq.q2">Чи потрібен інтернет?</span>
+              </button>
+              <div class="acc-panel">
+                <div class="acc-inner">
+                  <p data-i18n="faq.a2">Ні. Трекер, таймер, календар і репорти працюють офлайн. Capsa не відправляє записи в мережу.</p>
+                </div>
+              </div>
+            </div>
+            <div class="acc reveal" style="--d: 0.1s">
+              <button class="acc-btn" type="button" aria-expanded="false">
+                <span data-i18n="faq.q3">Як рахується заробіток?</span>
+              </button>
+              <div class="acc-panel">
+                <div class="acc-inner">
+                  <p data-i18n="faq.a3">
+                    У гривнях за ефективною ставкою проєкту або профілю. Якщо в проєкті ставка порожня, береться профіль.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="acc reveal" style="--d: 0.15s">
+              <button class="acc-btn" type="button" aria-expanded="false">
+                <span data-i18n="faq.q4">Куди діваються скріншоти?</span>
+              </button>
+              <div class="acc-panel">
+                <div class="acc-inner">
+                  <p data-i18n="faq.a4">
+                    Якщо опцію увімкнено — у папку Зображення/HDA - Capsa, підпапки по датах. На паузі знімки не робляться.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="acc reveal" style="--d: 0.2s">
+              <button class="acc-btn" type="button" aria-expanded="false">
+                <span data-i18n="faq.q5">Чому вікно не закривається?</span>
+              </button>
+              <div class="acc-panel">
+                <div class="acc-inner">
+                  <p data-i18n="faq.a5">Закриття ховає додаток у трей, щоб таймер жив далі. Повний вихід — з меню іконки в треї.</p>
+                </div>
+              </div>
+            </div>
+            <div class="acc reveal" style="--d: 0.25s">
+              <button class="acc-btn" type="button" aria-expanded="false">
+                <span data-i18n="faq.q6">Чи є Free і Pro?</span>
+              </button>
+              <div class="acc-panel">
+                <div class="acc-inner">
+                  <p data-i18n="faq.a6">
+                    Ні. Немає магазинної підписки й внутрішніх покупок. Capsa — локальний десктопний додаток; платформи з’являться, коли збірка буде готова.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="acc reveal" style="--d: 0.3s">
+              <button class="acc-btn" type="button" aria-expanded="false">
+                <span data-i18n="faq.q7">На яких системах буде Capsa?</span>
+              </button>
+              <div class="acc-panel">
+                <div class="acc-inner">
+                  <p data-i18n="faq.a7">
+                    Збірка вже вміє Windows, macOS і Linux. Публічний реліз — спочатку Windows. macOS і Linux пізніше, без вигаданих посилань на магазини.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="download">
+        <div class="wrap">
+          <div class="cta-band reveal">
+            <h2 data-i18n="cta.title">Спочатку Windows</h2>
+            <p data-i18n="cta.body">
+              Capsa збирається як десктопний додаток. Інсталятор для Windows з’явиться тут, коли буде готовий. macOS і Linux — наступними.
+            </p>
+            <div class="stores stores-3">
+              <article class="store is-soon">
+                <div class="store-icon" aria-hidden="true">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                    <path d="M3 5.5 10.2 4.6v6.7H3V5.5Zm8.4-.7L21 3.5v7.8h-9.6V4.8ZM3 13.2h7.2V20L3 18.9v-5.7Zm8.4 0H21V20.6l-9.6-1.4v-6Z" fill="currentColor" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 data-i18n="stores.win">Windows</h3>
+                  <p data-i18n="stores.winMeta">Інсталятор незабаром</p>
+                </div>
+                <span class="store-badge" data-i18n="stores.winBadge">Скоро</span>
+              </article>
+              <article class="store is-later">
+                <div class="store-icon" aria-hidden="true">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                    <path d="M16.6 12.4c0-2.3 1.9-3.4 2-3.5-1.1-1.6-2.8-1.8-3.4-1.8-1.4-.2-2.8.9-3.5.9s-1.8-.8-3-.8c-1.5 0-3 .9-3.8 2.3-1.6 2.8-.4 7 1.2 9.3.8 1.1 1.7 2.3 2.9 2.3 1.2 0 1.6-.7 3-.7s1.8.7 3 .7 2-.1 2.9-2.3c.7-1 1.2-2 1.5-3.1-3.5-1.3-2.8-6-1.8-6.3Z" fill="currentColor" />
+                    <path d="M14.4 5.8c.6-.8 1.1-1.9.9-3-1 .1-2.1.7-2.8 1.5-.6.7-1.2 1.9-1 2.9 1.1.1 2.2-.6 2.9-1.4Z" fill="currentColor" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 data-i18n="stores.mac">macOS</h3>
+                  <p data-i18n="stores.macMeta">У планах, не зараз</p>
+                </div>
+                <span class="store-badge" data-i18n="stores.macBadge">Пізніше</span>
+              </article>
+              <article class="store is-later">
+                <div class="store-icon" aria-hidden="true">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                    <path d="M12 3 4 7.5v9L12 21l8-4.5v-9L12 3Z" stroke="currentColor" stroke-width="1.8" />
+                    <path d="M12 12 4 7.5M12 12v9M12 12l8-4.5" stroke="currentColor" stroke-width="1.8" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 data-i18n="stores.linux">Linux</h3>
+                  <p data-i18n="stores.linuxMeta">AppImage / deb — пізніше</p>
+                </div>
+                <span class="store-badge" data-i18n="stores.linuxBadge">Пізніше</span>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap footer-inner">
+        <div>
+          <strong data-i18n="footer.copy">HDA - Capsa</strong>
+          <div data-i18n="footer.note">Особистий десктопний додаток. Видавець — HDA. Спочатку Windows. Магазин ще не підключений.</div>
+        </div>
+        <div class="footer-links">
+          <a href="../index.html">HDA</a>
+          <a href="../keepbay/index.html">Keepbay</a>
+          <a href="privacy.html" data-i18n="nav.privacy">Конфіденційність</a>
+        </div>
+      </div>
+    </footer>
+    <script src="../js/main.js"></script>
+  </body>
+</html>

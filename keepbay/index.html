@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html lang="uk" data-theme="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Keepbay — облік авто офлайн</title>
+    <meta
+      name="description"
+      content="Keepbay — офлайн-додаток для обліку авто, витрат, поїздок і нагадувань. Дані лишаються на телефоні."
+    />
+    <meta name="theme-color" content="#253139" />
+    <meta property="og:title" content="Keepbay" />
+    <meta
+      property="og:description"
+      content="Облік авто, витрат, поїздок і нагадувань. Офлайн за замовчуванням."
+    />
+    <meta property="og:type" content="website" />
+    <link rel="icon" href="../assets/keepbay-mark.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body class="page-v2" data-page="home">
+    <a class="skip" href="#main">Skip</a>
+    <div class="parallax-scene" aria-hidden="true">
+      <div class="orb orb-a" data-parallax="0.22"></div>
+      <div class="orb orb-b" data-parallax="0.08"></div>
+      <div class="orb orb-c" data-parallax="0.32"></div>
+    </div>
+    <header class="site-header">
+      <div class="wrap header-inner">
+        <div class="brand-stack">
+          <a class="brand-home" href="../index.html">HDA</a>
+          <a class="brand" href="index.html" aria-label="Keepbay">
+            <img src="../assets/keepbay-mark.svg" alt="" />
+            <span>Keep<span class="bay">bay</span></span>
+          </a>
+        </div>
+        <nav class="nav-links" aria-label="Primary">
+          <a href="#features" data-i18n="nav.features">Можливості</a>
+          <a href="#trial" data-i18n="nav.trial">Тріал</a>
+          <a href="#plans" data-i18n="nav.plans">Free і Pro</a>
+          <a href="#faq" data-i18n="nav.faq">Питання</a>
+          <a href="privacy.html" data-i18n="nav.privacy">Конфіденційність</a>
+        </nav>
+        <div class="header-actions">
+          <button class="lang-btn" id="lang-toggle" type="button" aria-label="Language">
+            EN
+          </button>
+          <button class="icon-btn" id="theme-toggle" type="button" aria-label="Theme"></button>
+          <a class="btn btn-gold btn-shine" href="#download" data-store="play" data-i18n="nav.download"
+            >Android</a
+          >
+          <button class="menu-btn" id="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="Menu">
+            <span class="menu-bars" aria-hidden="true"><span></span><span></span><span></span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+    <div class="menu-backdrop" id="menu-backdrop"></div>
+    <nav class="mobile-nav" id="mobile-nav" aria-hidden="true">
+      <a href="../index.html">HDA</a>
+      <a href="#features" data-i18n="nav.features">Можливості</a>
+      <a href="#trial" data-i18n="nav.trial">Тріал</a>
+      <a href="#plans" data-i18n="nav.plans">Free і Pro</a>
+      <a href="#faq" data-i18n="nav.faq">Питання</a>
+      <a href="privacy.html" data-i18n="nav.privacy">Конфіденційність</a>
+      <a class="btn btn-gold" href="#download" data-store="play" data-i18n="nav.download">Android</a>
+    </nav>
+
+    <main id="main">
+      <section class="hero">
+        <div class="wrap hero-grid">
+          <div class="hero-copy hero-enter">
+            <p class="eyebrow" data-i18n="hero.eyebrow">Для турботливих водіїв</p>
+            <h1 data-i18n="hero.title">Гараж, витрати і нагадування — завжди під рукою.</h1>
+            <p class="lead" data-i18n="hero.lead">
+              Keepbay веде авто офлайн: страховки, сервіс, розхідники, поїздки й карта. Хмарний акаунт не потрібен.
+            </p>
+            <div class="hero-cta">
+              <a class="btn btn-gold btn-shine" href="#download" data-store="play" data-i18n="hero.cta">Android незабаром</a>
+              <a class="btn btn-ghost" href="#trial" data-i18n="hero.trialCta">Спробувати 7 днів</a>
+            </div>
+            <p class="hero-note" data-i18n="hero.soon">Спочатку Google Play. iPhone з’явиться пізніше.</p>
+            <div class="pills" data-i18n-list="hero.pills">
+              <span class="pill">Офлайн</span>
+              <span class="pill">Android незабаром</span>
+              <span class="pill">Тріал 7 днів</span>
+            </div>
+          </div>
+          <div class="phone-stage">
+            <div class="phone phone-float phone-slideshow" data-device="android">
+              <span class="phone-cam" aria-hidden="true"></span>
+              <span class="phone-btn phone-vol" aria-hidden="true"></span>
+              <span class="phone-btn phone-power" aria-hidden="true"></span>
+              <span class="phone-port" aria-hidden="true"></span>
+              <div class="phone-screen" data-phone-slides aria-hidden="true">
+                <div class="phone-slide is-active">
+                  <div class="mock-appbar">
+                    <img class="mock-avatar" src="../assets/home-avatar.png" alt="" />
+                    <div class="mock-switcher">
+                      <strong data-i18n="mock.vehicle">Volkswagen</strong>
+                      <small data-i18n="mock.subtitle">ID.4 · AC3344KI</small>
+                    </div>
+                    <span class="mock-chevron">▾</span>
+                    <div class="mock-bell pulse">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                        <path d="M6.4 9a5.6 5.6 0 1 1 11.2 0c0 3.4 1.6 4.8 2 5.4H4.4C4.8 13.8 6.4 12.4 6.4 9Z" stroke="#E9B972" stroke-width="1.7" />
+                        <path d="M9.2 18.2a2.8 2.8 0 0 0 5.6 0" stroke="#E9B972" stroke-width="1.7" stroke-linecap="round" />
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="mock-scroll">
+                    <div class="mock-photo">
+                      <img src="../assets/home-car.png" alt="" />
+                    </div>
+                    <div class="mock-segment">
+                      <span class="mock-seg on"><i></i><b data-i18n="mock.auto">Авто</b></span>
+                      <span class="mock-seg"><i></i><b data-i18n="mock.cardTab">Картка</b></span>
+                    </div>
+                    <div class="mock-name">
+                      <strong data-i18n="mock.vehicle">Volkswagen</strong>
+                      <span data-i18n="mock.model">ID.4</span>
+                    </div>
+                    <div class="mock-badges">
+                      <div class="mock-badge">
+                        <span class="lbl" data-i18n="mock.kmLabel">Пробіг</span>
+                        <div class="mock-val">
+                          <img src="../assets/odometer.svg" alt="" />
+                          <span data-i18n="mock.km">24,500 км</span>
+                        </div>
+                      </div>
+                      <div class="mock-badge">
+                        <span class="lbl" data-i18n="mock.plateLabel">Номер</span>
+                        <div class="mock-val">
+                          <img src="../assets/identify-card.svg" alt="" />
+                          <span data-i18n="mock.plate">AC3344KI</span>
+                        </div>
+                      </div>
+                    </div>
+                    <p class="mock-h" data-i18n="mock.trips">Поїздки</p>
+                    <div class="mock-row">
+                      <div class="mock-icon">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                          <path d="M12 4.5 20 19H4L12 4.5Z" fill="currentColor" />
+                        </svg>
+                      </div>
+                      <div>
+                        <strong data-i18n="mock.startTrip">Почати поїздку</strong>
+                        <span data-i18n="mock.startTripMeta">Запис маршруту з GPS</span>
+                      </div>
+                      <span class="mock-go">›</span>
+                    </div>
+                    <div class="mock-row">
+                      <div class="mock-icon">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                          <path d="M5 16c3.2-4 5.2-2.4 7.6-5.2C14.8 8.4 16.6 6 20 6.8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+                          <circle cx="18.6" cy="7.2" r="2" fill="currentColor" />
+                        </svg>
+                      </div>
+                      <div>
+                        <strong data-i18n="mock.tripList">Список поїздок</strong>
+                        <span data-i18n="mock.tripListMeta">Остання: Невідомо</span>
+                      </div>
+                      <span class="mock-go">›</span>
+                    </div>
+                    <p class="mock-h" data-i18n="mock.insurance">Страховка</p>
+                  </div>
+                  <div data-mock-nav="0"></div>
+                </div>
+
+                <div class="phone-slide">
+                  <div class="mock-topbar">
+                    <strong data-i18n="mock.garageTitle">Ваш гараж</strong>
+                    <div class="mock-tools">
+                      <span class="mock-tool">
+                        <svg viewBox="0 0 24 24" fill="none"><path d="M4 7h6l2 2h8v10H4V7Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" /></svg>
+                      </span>
+                      <span class="mock-tool">
+                        <svg viewBox="0 0 24 24" fill="none"><path d="M12 6v12M6 12h12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" /></svg>
+                      </span>
+                    </div>
+                  </div>
+                  <div class="mock-scroll">
+                    <article class="g-card">
+                      <div class="g-head">
+                        <span class="g-ico"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M5 12.5 8 8h8l4 5.2v4.3H5v-5Z" /><circle cx="8" cy="17.2" r="1.6" /><circle cx="16.5" cy="17.2" r="1.6" /></svg></span>
+                        <div>
+                          <b>Xiaomi 4 Pro</b>
+                          <div class="g-meta">2024 <span class="g-chip escooter" data-i18n="mock.typeEscooter">Електросамокат</span></div>
+                        </div>
+                      </div>
+                      <div class="g-stats">
+                        <div class="g-stat"><span data-i18n="mock.startKm">Старт</span><b>40.00 <span data-i18n="mock.kmUnit">км</span></b></div>
+                        <div class="g-stat"><span data-i18n="mock.nowKm">Зараз</span><b>680.00 <span data-i18n="mock.kmUnit">км</span></b></div>
+                      </div>
+                    </article>
+                    <article class="g-card">
+                      <div class="g-head">
+                        <span class="g-ico"><svg viewBox="0 0 24 24" fill="none"><circle cx="6.5" cy="15.5" r="2.2" stroke="currentColor" stroke-width="1.6" /><circle cx="17.5" cy="15.5" r="2.2" stroke="currentColor" stroke-width="1.6" /><path d="M8.6 15.2 12 8.5l5.2 6.5M12 8.5 10 6H8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" /></svg></span>
+                        <div>
+                          <b>Giant Escape 3</b>
+                          <div class="g-meta">2022 <span class="g-chip bicycle" data-i18n="mock.typeBicycle">Велосипед</span></div>
+                        </div>
+                      </div>
+                      <div class="g-stats">
+                        <div class="g-stat"><span data-i18n="mock.startKm">Старт</span><b>120.00 <span data-i18n="mock.kmUnit">км</span></b></div>
+                        <div class="g-stat"><span data-i18n="mock.nowKm">Зараз</span><b>1,840.00 <span data-i18n="mock.kmUnit">км</span></b></div>
+                      </div>
+                    </article>
+                    <article class="g-card is-on">
+                      <div class="g-head">
+                        <img class="g-thumb" src="../assets/home-car.png" alt="" />
+                        <div>
+                          <b>Volkswagen ID.4</b>
+                          <div class="g-meta">2023 <span class="g-chip car" data-i18n="mock.typeCar">Авто</span></div>
+                        </div>
+                        <span class="g-check">✓</span>
+                      </div>
+                      <div class="g-plate">AC3344KI</div>
+                      <div class="g-stats">
+                        <div class="g-stat"><span data-i18n="mock.startKm">Старт</span><b>8,000.00 <span data-i18n="mock.kmUnit">км</span></b></div>
+                        <div class="g-stat"><span data-i18n="mock.nowKm">Зараз</span><b>24,500.00 <span data-i18n="mock.kmUnit">км</span></b></div>
+                      </div>
+                    </article>
+                    <article class="g-card">
+                      <div class="g-head">
+                        <span class="g-ico"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M5 13.2 8.2 8h7.2L19 13.4v4H5v-4.2Z" /><circle cx="8" cy="17.4" r="1.5" /><circle cx="16.4" cy="17.4" r="1.5" /></svg></span>
+                        <div>
+                          <b>Honda Dio</b>
+                          <div class="g-meta">2020 <span class="g-chip scooter" data-i18n="mock.typeScooter">Скутер</span></div>
+                        </div>
+                      </div>
+                      <div class="g-plate">KA1188HM</div>
+                    </article>
+                  </div>
+                  <div data-mock-nav="1"></div>
+                </div>
+
+                <div class="phone-slide">
+                  <div class="mock-topbar">
+                    <div class="act-search act-search-bar">
+                      <div class="act-field">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="6" stroke="currentColor" stroke-width="1.8" /><path d="M16 16l4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" /></svg>
+                        <span data-i18n="mock.search">Пошук</span>
+                      </div>
+                      <span class="mock-tool">
+                        <svg viewBox="0 0 24 24" fill="none"><path d="M12 6v12M6 12h12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" /></svg>
+                      </span>
+                    </div>
+                  </div>
+                  <div class="mock-scroll">
+                    <div class="act-chips">
+                      <span class="act-chip is-on" data-i18n="mock.all">Усі</span>
+                      <span class="act-chip" data-i18n="mock.note">Нотатка</span>
+                      <span class="act-chip" data-i18n="mock.service">Сервіс</span>
+                      <span class="act-chip" data-i18n="mock.electric">Електро</span>
+                    </div>
+                    <article class="act-card">
+                      <span class="act-ico wash"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3s6 7 6 11a6 6 0 1 1-12 0c0-4 6-11 6-11Z" /></svg></span>
+                      <div>
+                        <strong data-i18n="mock.coffeeWash">Кава і мийка</strong>
+                        <div class="act-tags">
+                          <span class="act-tag ok" data-i18n="mock.done">Виконано</span>
+                          <span class="act-tag" data-i18n="mock.wash">Мийка</span>
+                        </div>
+                      </div>
+                      <div>
+                        <span class="act-cost">350.00 UAH</span>
+                        <span class="act-when" data-i18n="mock.date1">2 вер. 2026</span>
+                      </div>
+                    </article>
+                    <article class="act-card">
+                      <span class="act-ico park"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M4 11 12 5l8 6v8H4v-8Z" stroke="currentColor" stroke-width="1.7" /></svg></span>
+                      <div>
+                        <strong data-i18n="mock.parking">Парковка</strong>
+                        <div class="act-tags">
+                          <span class="act-tag ok" data-i18n="mock.done">Виконано</span>
+                          <span class="act-tag" data-i18n="mock.parking">Парковка</span>
+                        </div>
+                      </div>
+                      <div>
+                        <span class="act-cost">115.00 UAH</span>
+                        <span class="act-when" data-i18n="mock.date1">2 вер. 2026</span>
+                      </div>
+                    </article>
+                    <article class="act-card">
+                      <span class="act-ico bolt"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M13 3 5 14h6l-1 7 9-12h-6l0-6Z" /></svg></span>
+                      <div>
+                        <strong data-i18n="mock.chargeDc">Зарядка DC</strong>
+                        <div class="act-tags">
+                          <span class="act-tag ok" data-i18n="mock.done">Виконано</span>
+                          <span class="act-tag" data-i18n="mock.electric">Електро</span>
+                        </div>
+                      </div>
+                      <div>
+                        <span class="act-cost">280.00 UAH</span>
+                        <span class="act-when" data-i18n="mock.date1">2 вер. 2026</span>
+                      </div>
+                    </article>
+                    <article class="act-card">
+                      <span class="act-ico wash"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3s6 7 6 11a6 6 0 1 1-12 0c0-4 6-11 6-11Z" /></svg></span>
+                      <div>
+                        <strong data-i18n="mock.coffeeWash">Кава і мийка</strong>
+                        <div class="act-tags">
+                          <span class="act-tag ok" data-i18n="mock.done">Виконано</span>
+                          <span class="act-tag" data-i18n="mock.wash">Мийка</span>
+                        </div>
+                      </div>
+                      <div>
+                        <span class="act-cost">395.00 UAH</span>
+                        <span class="act-when" data-i18n="mock.date2">1 вер. 2026</span>
+                      </div>
+                    </article>
+                    <article class="act-card">
+                      <span class="act-ico park"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M4 11 12 5l8 6v8H4v-8Z" stroke="currentColor" stroke-width="1.7" /></svg></span>
+                      <div>
+                        <strong data-i18n="mock.parking">Парковка</strong>
+                        <div class="act-tags">
+                          <span class="act-tag ok" data-i18n="mock.done">Виконано</span>
+                          <span class="act-tag" data-i18n="mock.parking">Парковка</span>
+                        </div>
+                      </div>
+                      <div>
+                        <span class="act-cost">160.00 UAH</span>
+                        <span class="act-when" data-i18n="mock.date2">1 вер. 2026</span>
+                      </div>
+                    </article>
+                  </div>
+                  <span class="act-fab"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M13 3 5 14h6l-1 7 9-12h-6l0-6Z" /></svg><span data-i18n="mock.templates">Шаблони</span></span>
+                  <div data-mock-nav="2"></div>
+                </div>
+
+                <div class="phone-slide">
+                  <div class="mock-topbar">
+                    <strong data-i18n="mock.mapTitle">Сервіси</strong>
+                  </div>
+                  <div class="mock-map">
+                    <div class="map-roads"></div>
+                    <span class="map-label city" data-i18n="mock.city">Охтирка</span>
+                    <span class="map-pin p1"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3 5 14h6l-1 7 9-12h-6Z" /></svg></span>
+                    <span class="map-pin p2"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3s6 7 6 11a6 6 0 1 1-12 0c0-4 6-11 6-11Z" /></svg></span>
+                    <span class="map-pin p3"><svg viewBox="0 0 24 24" fill="none"><path d="M7 16V8l10 2v8" stroke="#fff" stroke-width="1.8" /></svg></span>
+                    <span class="map-pin p4"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 7h10v4H7zM6 13h12v6H6z" /></svg></span>
+                    <span class="map-pin p5"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 8h10l2 4H5l2-4Zm-1 6h12v5H6v-5Z" /></svg></span>
+                    <span class="map-pin p6"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 4a5 5 0 0 1 5 5c0 4-5 10-5 10S7 13 7 9a5 5 0 0 1 5-5Z" /></svg></span>
+                    <span class="map-dot me"></span>
+                    <div class="map-side top">
+                      <span class="map-round"><svg viewBox="0 0 24 24" fill="none"><path d="M6 6h12v4H6zM7 12h10v7H7z" stroke="currentColor" stroke-width="1.6" /></svg></span>
+                      <span class="map-round"><svg viewBox="0 0 24 24" fill="none"><path d="M4 7h6l2 2h8v10H4V7Z" stroke="currentColor" stroke-width="1.6" /></svg></span>
+                    </div>
+                    <div class="map-side mid">
+                      <span class="map-round is-on"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="1.6" /><path d="M12 5v2M12 17v2M5 12h2M17 12h2" stroke="currentColor" stroke-width="1.6" /></svg></span>
+                    </div>
+                  </div>
+                  <div data-mock-nav="3"></div>
+                </div>
+
+                <div class="phone-slide">
+                  <div class="mock-topbar">
+                    <strong data-i18n="mock.settingsTitle">Налаштування</strong>
+                  </div>
+                  <div class="mock-scroll">
+                    <div class="set-user">
+                      <span class="set-ava">?</span>
+                      <div>
+                        <b data-i18n="mock.user">Користувач</b>
+                        <span class="pro-badge">PRO</span>
+                      </div>
+                      <span class="mock-go">›</span>
+                    </div>
+                    <div class="set-row">
+                      <span class="set-ico"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13 3 5 14h6l-1 7 9-12h-6Z" /></svg></span>
+                      <span data-i18n="mock.freePro">Free і Pro</span>
+                      <span class="pro-badge end">PRO</span>
+                      <span class="mock-go">›</span>
+                    </div>
+                    <div class="set-row">
+                      <span class="set-ico"><svg viewBox="0 0 24 24" fill="none"><path d="M6 9a6 6 0 1 1 12 0c0 4 2 5 2 5H4s2-1 2-5Z" stroke="currentColor" stroke-width="1.6" /><path d="M10 19a2 2 0 0 0 4 0" stroke="currentColor" stroke-width="1.6" /></svg></span>
+                      <span data-i18n="mock.notifications">Сповіщення</span>
+                      <span class="mock-go">›</span>
+                    </div>
+                    <div class="set-row">
+                      <span class="set-ico"><svg viewBox="0 0 24 24" fill="none"><path d="M12 12m-3 0a3 3 0 1 0 6 0 3 3 0 1 0-6 0" stroke="currentColor" stroke-width="1.6" /><path d="M12 3v2M12 19v2M5 12H3M21 12h-2" stroke="currentColor" stroke-width="1.6" /></svg></span>
+                      <span data-i18n="mock.mapGeo">Мапа та геолокація</span>
+                      <span class="mock-go">›</span>
+                    </div>
+                    <div class="set-row">
+                      <span class="set-ico"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="1.6" /><circle cx="12" cy="12" r="7" stroke="currentColor" stroke-width="1.6" /></svg></span>
+                      <span data-i18n="mock.nfc">NFC-мітки</span>
+                      <span class="mock-go">›</span>
+                    </div>
+                    <div class="set-row">
+                      <span class="set-ico"><svg viewBox="0 0 24 24" fill="none"><path d="M7 4h7l4 4v12H7V4Z" stroke="currentColor" stroke-width="1.6" /><path d="M14 4v4h4" stroke="currentColor" stroke-width="1.6" /></svg></span>
+                      <span data-i18n="mock.backup">Резервна копія</span>
+                      <span class="mock-go">›</span>
+                    </div>
+                    <div class="set-row">
+                      <span class="set-ico"><svg viewBox="0 0 24 24" fill="none"><path d="M7 11V8a5 5 0 0 1 10 0v3" stroke="currentColor" stroke-width="1.6" /><rect x="5" y="11" width="14" height="9" rx="2" stroke="currentColor" stroke-width="1.6" /></svg></span>
+                      <span data-i18n="mock.docsLock">Захист документів</span>
+                      <span class="mock-go">›</span>
+                    </div>
+                    <div class="set-row">
+                      <span class="set-ico"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13 3 5 14h6l-1 7 9-12h-6Z" /></svg></span>
+                      <span class="set-grow" data-i18n="mock.templatesFab">Кнопка шаблонів на вкладці Дії</span>
+                      <span class="set-toggle"></span>
+                    </div>
+                    <div class="set-row">
+                      <span class="set-ico"><svg viewBox="0 0 24 24" fill="none"><path d="M4 6h16M4 12h10M4 18h7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" /></svg></span>
+                      <span data-i18n="mock.language">Мова</span>
+                      <span class="mock-go">›</span>
+                    </div>
+                    <div class="set-row">
+                      <span class="set-ico"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.6" /><path d="M12 4v2M12 18v2M4 12h2M18 12h2" stroke="currentColor" stroke-width="1.6" /></svg></span>
+                      <span data-i18n="mock.theme">Тема</span>
+                      <span class="mock-go">›</span>
+                    </div>
+                    <div class="set-row">
+                      <span class="set-ico"><svg viewBox="0 0 24 24" fill="none"><rect x="4" y="6" width="16" height="12" rx="2" stroke="currentColor" stroke-width="1.6" /><path d="M8 10h8M8 14h5" stroke="currentColor" stroke-width="1.6" /></svg></span>
+                      <span data-i18n="mock.developer">Інструменти розробника</span>
+                      <span class="mock-go">›</span>
+                    </div>
+                  </div>
+                  <div data-mock-nav="4"></div>
+                </div>
+              </div>
+            </div>
+            <div class="device-switch" role="group" aria-label="Device frame">
+              <button type="button" data-device="android" class="is-on" data-i18n="device.android">Android</button>
+              <button type="button" data-device="ios" disabled>
+                <span data-i18n="device.ios">iPhone</span>
+                <small data-i18n="device.later">Пізніше</small>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="features">
+        <div class="wrap">
+          <div class="section-head reveal">
+            <h2 data-i18n="features.title">Все, що потрібно авто в одному місці</h2>
+            <p data-i18n="features.lead">
+              Той самий спокій, що в додатку: короткі картки, золотий акцент і дані, які нікуди не їдуть без вашого дозволу.
+            </p>
+          </div>
+          <div class="features">
+            <article class="feature reveal" style="--d: 0s">
+              <div class="icon" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <path d="M4 10h16l-1.5 9h-13L4 10Z" stroke="currentColor" stroke-width="2" />
+                  <path d="M8 10V7a4 4 0 0 1 8 0v3" stroke="currentColor" stroke-width="2" />
+                </svg>
+              </div>
+              <h3 data-i18n="features.garage.title">Гараж</h3>
+              <p data-i18n="features.garage.body">
+                Авто чи мото, техпаспорт, VIN, пробіг і архів проданих. На Free робочим є одне авто.
+              </p>
+            </article>
+            <article class="feature reveal" style="--d: 0.08s">
+              <div class="icon" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <rect x="4" y="5" width="16" height="14" rx="3" stroke="currentColor" stroke-width="2" />
+                  <path d="M8 10h8M8 14h5" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                </svg>
+              </div>
+              <h3 data-i18n="features.actions.title">Дії та витрати</h3>
+              <p data-i18n="features.actions.body">
+                Заправки, сервіс, мийка, штрафи й нотатки. Один шаблон доступний у Free, до 30 на авто — у Pro.
+              </p>
+            </article>
+            <article class="feature reveal" style="--d: 0.16s">
+              <div class="icon" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <path d="M6 9a6 6 0 1 1 12 0c0 4 2 5 2 5H4s2-1 2-5Z" stroke="currentColor" stroke-width="2" />
+                  <path d="M10 18a2 2 0 0 0 4 0" stroke="currentColor" stroke-width="2" />
+                </svg>
+              </div>
+              <h3 data-i18n="features.reminders.title">Нагадування</h3>
+              <p data-i18n="features.reminders.body">
+                Страховка, розхідники й власні нагадування за датою або пробігом. Pro додає турботу про авто.
+              </p>
+            </article>
+            <article class="feature reveal" style="--d: 0.24s">
+              <div class="icon" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <path d="M4 16c4-6 6-3 9-7s5-5 7-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                  <circle cx="17" cy="7" r="2.5" stroke="currentColor" stroke-width="2" />
+                </svg>
+              </div>
+              <h3 data-i18n="features.trips.title">Поїздки</h3>
+              <p data-i18n="features.trips.body">
+                GPS-трекінг працює з заблокованим екраном, а завершений маршрут можна анімовано переграти на карті.
+              </p>
+            </article>
+            <article class="feature reveal" style="--d: 0.32s">
+              <div class="icon" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11Z" stroke="currentColor" stroke-width="2" />
+                  <circle cx="12" cy="10" r="2.2" stroke="currentColor" stroke-width="2" />
+                </svg>
+              </div>
+              <h3 data-i18n="features.map.title">Карта</h3>
+              <p data-i18n="features.map.body">
+                Свої СТО, АЗС і мийки, керований кеш карти. Pro додає офлайн-райони й точки стоянки авто.
+              </p>
+            </article>
+            <article class="feature reveal" style="--d: 0.4s">
+              <div class="icon" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <rect x="5" y="4" width="14" height="16" rx="3" stroke="currentColor" stroke-width="2" />
+                  <path d="M9 9h6M9 13h4" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                </svg>
+              </div>
+              <h3 data-i18n="features.offline.title">Дані на пристрої</h3>
+              <p data-i18n="features.offline.body">
+                Усі записи в локальній базі. Excel завжди під рукою; повна копія на Google Drive — у Pro, коли ви самі її запускаєте.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section real-showcase-section" aria-labelledby="real-showcase-title">
+        <div class="wrap">
+          <div class="real-showcase reveal">
+            <div class="real-showcase-copy">
+              <p class="eyebrow" data-i18n="showcase.eyebrow">Справжній Keepbay</p>
+              <h2 id="real-showcase-title" data-i18n="showcase.title">Спокійний інтерфейс для щоденних справ</h2>
+              <p data-i18n="showcase.body">
+                Без рекламного шуму та зайвих екранів. Гараж, витрати й маршрути говорять однією зрозумілою мовою.
+              </p>
+              <div class="real-showcase-points" aria-label="Keepbay highlights">
+                <span data-i18n="showcase.point1">Реальні екрани</span>
+                <span data-i18n="showcase.point2">Дані на пристрої</span>
+                <span data-i18n="showcase.point3">Створено для водія</span>
+              </div>
+            </div>
+            <div class="real-showcase-media">
+              <img
+                src="../assets/keepbay-real-screens.webp"
+                alt="Головна, дії та деталі поїздки в Keepbay"
+                data-i18n-alt="showcase.alt"
+                width="1400"
+                height="900"
+                loading="lazy"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="how">
+        <div class="wrap story">
+          <article class="story-card reveal">
+            <h3 data-i18n="story.garageTitle">Додайте авто — і все збирається навколо нього</h3>
+            <p data-i18n="story.garageBody">
+              Розхідники, поломки, страховки, документи й статистика прив’язані до вибраного авто. Перемикач на головній змінює весь контекст.
+            </p>
+            <img src="../assets/onboarding-garage.svg" alt="" />
+          </article>
+          <article class="story-card reveal" style="--d: 0.1s">
+            <h3 data-i18n="story.remindTitle">Сповіщення, які не кричать без причини</h3>
+            <p data-i18n="story.remindBody">
+              Поліс спливає, фільтр просить заміни, після довгої поїздки варто глянути пробіг. Keepbay нагадує м’яко і по суті.
+            </p>
+            <img src="../assets/onboarding-reminders.svg" alt="" />
+          </article>
+          <article class="story-card reveal">
+            <h3 data-i18n="story.tripTitle">Контролюй маршрут — і витрати</h3>
+            <p data-i18n="story.tripBody">
+              Записуйте поїздки, дивіться паливо, час і загальну статистику. Тижневий графік на головній лишається навіть на Free.
+            </p>
+            <img src="../assets/onboarding-trips.svg" alt="" />
+          </article>
+          <article class="story-card reveal" style="--d: 0.1s">
+            <h3 data-i18n="story.startTitle">Керуйте транспортом просто і наочно</h3>
+            <p data-i18n="story.startBody">
+              Головна, гараж, дії, карта і налаштування. Решта — страховки, документи, звіти — відкривається з карток, коли знадобиться.
+            </p>
+            <img src="../assets/onboarding-start.svg" alt="" />
+          </article>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="wrap">
+          <div class="privacy-strip reveal">
+            <div>
+              <h2 data-i18n="privacy.title">Офлайн за замовчуванням</h2>
+              <p data-i18n="privacy.body">
+                Записи лишаються на пристрої. Під час активної поїздки геолокація може працювати у фоні, але маршрут не надсилається на сторонні сервери.
+              </p>
+            </div>
+            <a class="btn btn-ghost" href="privacy.html" data-i18n="privacy.cta">Політика конфіденційності</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="trial">
+        <div class="wrap">
+          <div class="trial-band reveal">
+            <div class="trial-count" aria-hidden="true">
+              <strong id="trial-days">0</strong>
+              <span data-i18n="trial.days">днів</span>
+            </div>
+            <div>
+              <p class="eyebrow" data-i18n="trial.eyebrow">7 днів Pro без оплати</p>
+              <h2 data-i18n="trial.title">Спробуйте Pro 7 днів</h2>
+              <p data-i18n="trial.body">
+                Пробний період відкриває всі фічі Pro — усі авто, документи, шаблони, бекап на Drive, звіти й офлайн-карти. Після закінчення робочим лишається одне авто, дані залишаються на телефоні.
+              </p>
+              <p class="trial-where" data-i18n="trial.where">
+                Увімкнути тріал можна в Налаштуваннях → Free і Pro.
+              </p>
+            </div>
+          </div>
+          <div class="trial-steps">
+            <article class="trial-step reveal" style="--d: 0s">
+              <span>01</span>
+              <h3 data-i18n="trial.step1Title">Без картки</h3>
+              <p data-i18n="trial.step1">Покупка ще не підключена. Тріал відкривається в додатку без оплати.</p>
+            </article>
+            <article class="trial-step reveal" style="--d: 0.1s">
+              <span>02</span>
+              <h3 data-i18n="trial.step2Title">Усі фічі Pro</h3>
+              <p data-i18n="trial.step2">Гараж без ліміту, документи, шаблони, автобекап, звіти й офлайн-карта.</p>
+            </article>
+            <article class="trial-step reveal" style="--d: 0.2s">
+              <span>03</span>
+              <h3 data-i18n="trial.step3Title">Дані лишаються</h3>
+              <p data-i18n="trial.step3">Після 7 днів зайві авто замкнуться. Документи й фото, які вже є, можна дивитись.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="plans">
+        <div class="wrap">
+          <div class="section-head reveal">
+            <h2 data-i18n="plans.title">Free і Pro</h2>
+            <p data-i18n="plans.lead">
+              Free повністю веде одне авто офлайн. Pro відкриває гараж, документи, шаблони, звіти й офлайн-карту.
+            </p>
+          </div>
+          <div class="plans">
+            <article class="plan reveal">
+              <div class="badge">FREE</div>
+              <h3 data-i18n="plans.freeName">Free</h3>
+              <p class="price" data-i18n="plans.freePrice">Безкоштовно</p>
+              <ul>
+                <li class="plan-group"><span data-i18n="plans.groupCore">Основний облік</span></li>
+                <li><b data-i18n="plans.core">Дії, поїздки, страховка, розхідники, NFC і віджети</b><span data-i18n="plans.yes">є</span></li>
+                <li><b data-i18n="plans.activity">Журнал активності</b><span data-i18n="plans.yes">є</span></li>
+                <li><b data-i18n="plans.vehicles">Авто в гаражі</b><span data-i18n="plans.vehiclesFree">1 активне · 1 зміна</span></li>
+                <li><b data-i18n="plans.charts">Період графіків</b><span data-i18n="plans.chartsFree">90 днів</span></li>
+                <li class="plan-group"><span data-i18n="plans.groupLimits">Ліміти</span></li>
+                <li><b data-i18n="plans.reminders">Власні нагадування</b><span data-i18n="plans.remindersFree">1</span></li>
+                <li><b data-i18n="plans.templates">Шаблони дій</b><span data-i18n="plans.templatesFree">1 на авто</span></li>
+                <li><b data-i18n="plans.places">Місця на карті</b><span data-i18n="plans.placesFree">до 20</span></li>
+                <li class="plan-group"><span data-i18n="plans.groupAdvanced">Розширені можливості</span></li>
+                <li><b data-i18n="plans.care">Турбота про авто</b><span data-i18n="plans.dash">—</span></li>
+                <li><b data-i18n="plans.documents">Папка документів</b><span data-i18n="plans.dash">—</span></li>
+                <li><b data-i18n="plans.photos">Фото до записів</b><span data-i18n="plans.dash">—</span></li>
+                <li><b data-i18n="plans.evEnergy">Статистика електротранспорту</b><span data-i18n="plans.dash">—</span></li>
+                <li><b data-i18n="plans.parking">Стоянки авто</b><span data-i18n="plans.dash">—</span></li>
+                <li><b data-i18n="plans.maps">Офлайн-райони карти</b><span data-i18n="plans.dash">—</span></li>
+                <li><b data-i18n="plans.reports">Звіти PDF</b><span data-i18n="plans.dash">—</span></li>
+                <li><b data-i18n="plans.soldArchive">Архів проданих авто</b><span data-i18n="plans.dash">—</span></li>
+                <li class="plan-group"><span data-i18n="plans.groupSecurity">Безпека й копії</span></li>
+                <li><b data-i18n="plans.backup">Копія даних</b><span data-i18n="plans.backupFree">Excel</span></li>
+                <li><b data-i18n="plans.autoBackup">Автобекап на Drive</b><span data-i18n="plans.dash">—</span></li>
+                <li><b data-i18n="plans.security">App Lock і захист документів</b><span data-i18n="plans.dash">—</span></li>
+              </ul>
+            </article>
+            <article class="plan pro reveal" style="--d: 0.12s">
+              <div class="badge badge-shine">PRO + TRIAL</div>
+              <h3 data-i18n="plans.proName">Pro</h3>
+              <p class="price" data-i18n="plans.proPrice">Покупка ще не підключена · є тріал на 7 днів</p>
+              <ul>
+                <li class="plan-group"><span data-i18n="plans.groupCore">Основний облік</span></li>
+                <li><b data-i18n="plans.core">Дії, поїздки, страховка, розхідники, NFC і віджети</b><span data-i18n="plans.yes">є</span></li>
+                <li><b data-i18n="plans.activity">Журнал активності</b><span data-i18n="plans.yes">є</span></li>
+                <li><b data-i18n="plans.vehicles">Авто в гаражі</b><span data-i18n="plans.vehiclesPro">без ліміту</span></li>
+                <li><b data-i18n="plans.charts">Період графіків</b><span data-i18n="plans.chartsPro">увесь період</span></li>
+                <li class="plan-group"><span data-i18n="plans.groupLimits">Ліміти</span></li>
+                <li><b data-i18n="plans.reminders">Власні нагадування</b><span data-i18n="plans.remindersPro">20</span></li>
+                <li><b data-i18n="plans.templates">Шаблони дій</b><span data-i18n="plans.templatesPro">до 30 на авто</span></li>
+                <li><b data-i18n="plans.places">Місця на карті</b><span data-i18n="plans.placesPro">до 200</span></li>
+                <li class="plan-group"><span data-i18n="plans.groupAdvanced">Розширені можливості</span></li>
+                <li><b data-i18n="plans.care">Турбота про авто</b><span data-i18n="plans.yes">є</span></li>
+                <li><b data-i18n="plans.documents">Папка документів</b><span data-i18n="plans.yes">є</span></li>
+                <li><b data-i18n="plans.photos">Фото до записів</b><span data-i18n="plans.photosPro">до 6 на запис</span></li>
+                <li><b data-i18n="plans.evEnergy">Статистика електротранспорту</b><span data-i18n="plans.yes">є</span></li>
+                <li><b data-i18n="plans.parking">Стоянки авто</b><span data-i18n="plans.yes">є</span></li>
+                <li><b data-i18n="plans.maps">Офлайн-райони карти</b><span data-i18n="plans.mapsPro">до 5</span></li>
+                <li><b data-i18n="plans.reports">Звіти PDF</b><span data-i18n="plans.yes">є</span></li>
+                <li><b data-i18n="plans.soldArchive">Архів проданих авто</b><span data-i18n="plans.yes">є</span></li>
+                <li class="plan-group"><span data-i18n="plans.groupSecurity">Безпека й копії</span></li>
+                <li><b data-i18n="plans.backup">Копія даних</b><span data-i18n="plans.backupPro">Drive + Excel</span></li>
+                <li><b data-i18n="plans.autoBackup">Автобекап на Drive</b><span data-i18n="plans.yes">є</span></li>
+                <li><b data-i18n="plans.security">App Lock і захист документів</b><span data-i18n="plans.yes">є</span></li>
+              </ul>
+              <p class="plan-note" data-i18n="plans.note">
+                Після завершення тріалу дані залишаються на пристрої. Обмежуються лише можливості Pro.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="faq">
+        <div class="wrap">
+          <div class="section-head reveal">
+            <h2 data-i18n="faq.title">Короткі відповіді</h2>
+            <p data-i18n="faq.lead">Так само, як у розділі допомоги в додатку.</p>
+          </div>
+          <div class="faq" data-accordion>
+            <div class="acc is-open reveal">
+              <button class="acc-btn" type="button" aria-expanded="true">
+                <span data-i18n="faq.q1">Де зберігаються дані?</span>
+              </button>
+              <div class="acc-panel">
+                <div class="acc-inner">
+                  <p data-i18n="faq.a1">Локально на телефоні в базі Keepbay. Хмарний акаунт для роботи не потрібен.</p>
+                </div>
+              </div>
+            </div>
+            <div class="acc reveal" style="--d: 0.05s">
+              <button class="acc-btn" type="button" aria-expanded="false">
+                <span data-i18n="faq.q2">Чим відрізняються Free і Pro?</span>
+              </button>
+              <div class="acc-panel">
+                <div class="acc-inner">
+                  <p data-i18n="faq.a2">
+                    Free дозволяє повністю вести одне авто офлайн. Pro відкриває всі авто, документи, шаблони, автобекап, біометрію додатка, захист документів, звіти й офлайн-райони карти. Є пробний Pro на 7 днів.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="acc reveal" style="--d: 0.1s">
+              <button class="acc-btn" type="button" aria-expanded="false">
+                <span data-i18n="faq.q6">Як працює тріал?</span>
+              </button>
+              <div class="acc-panel">
+                <div class="acc-inner">
+                  <p data-i18n="faq.a6">
+                    У Налаштуваннях → Free і Pro активуйте пробний Pro на 7 днів. Усі фічі відкриті. Коли термін спливе, робочим лишається одне авто, дані не видаляються. Новий тріал можна знову ввімкнути на тій самій сторінці.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="acc reveal" style="--d: 0.12s">
+              <button class="acc-btn" type="button" aria-expanded="false">
+                <span data-i18n="faq.q7">Чи буде Keepbay на iPhone?</span>
+              </button>
+              <div class="acc-panel">
+                <div class="acc-inner">
+                  <p data-i18n="faq.a7">
+                    Так, але не зараз. Спочатку виходить Android у Google Play. iOS з’явиться пізніше, коли Android стабільно житиме в магазині.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="acc reveal" style="--d: 0.15s">
+              <button class="acc-btn" type="button" aria-expanded="false">
+                <span data-i18n="faq.q3">Чи потрібен інтернет?</span>
+              </button>
+              <div class="acc-panel">
+                <div class="acc-inner">
+                  <p data-i18n="faq.a3">
+                    Ні, для обліку — ні. Інтернет потрібен для онлайн-карти, завантаження офлайн-району та копії на Google Drive.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="acc reveal" style="--d: 0.2s">
+              <button class="acc-btn" type="button" aria-expanded="false">
+                <span data-i18n="faq.q4">Як захистити додаток і документи?</span>
+              </button>
+              <div class="acc-panel">
+                <div class="acc-inner">
+                  <p data-i18n="faq.a4">
+                    У Pro можна заблокувати весь додаток біометрією і окремо папку документів PIN або біометрією. У Free додаток і вже збережені файли відкриваються без пароля.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="acc reveal" style="--d: 0.25s">
+              <button class="acc-btn" type="button" aria-expanded="false">
+                <span data-i18n="faq.q5">Куди діваються резервні копії?</span>
+              </button>
+              <div class="acc-panel">
+                <div class="acc-inner">
+                  <p data-i18n="faq.a5">
+                    Excel працює без акаунта. Повна копія на Google Drive з фото — у Pro, лише коли ви експортуєте або вмикаєте автобекап.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="acc reveal" style="--d: 0.3s">
+              <button class="acc-btn" type="button" aria-expanded="false">
+                <span data-i18n="faq.q8">Чи працює запис поїздки із заблокованим екраном?</span>
+              </button>
+              <div class="acc-panel">
+                <div class="acc-inner">
+                  <p data-i18n="faq.a8">
+                    Так. Під час активної поїздки Android показує постійне сповіщення, а Keepbay продовжує записувати GPS у фоні. Для стабільної роботи потрібні фоновий доступ до геолокації та відсутність жорсткого обмеження батареї.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="download">
+        <div class="wrap">
+          <div class="cta-band reveal">
+            <h2 data-i18n="cta.title">Спочатку Android</h2>
+            <p data-i18n="cta.body">
+              Keepbay вже збирається в Google Play. iPhone буде, але не в першій хвилі — коли Android стабільно житиме в магазині.
+            </p>
+            <div class="stores">
+              <article class="store is-soon">
+                <div class="store-icon" aria-hidden="true">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                    <path d="M7 3.5 17.5 12 7 20.5V3.5Z" fill="currentColor" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 data-i18n="stores.android">Android</h3>
+                  <p data-i18n="stores.androidMeta">Незабаром у Google Play</p>
+                </div>
+                <span class="store-badge" data-i18n="stores.androidBadge">Скоро</span>
+              </article>
+              <article class="store is-later">
+                <div class="store-icon" aria-hidden="true">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                    <path d="M16.6 12.4c0-2.3 1.9-3.4 2-3.5-1.1-1.6-2.8-1.8-3.4-1.8-1.4-.2-2.8.9-3.5.9s-1.8-.8-3-.8c-1.5 0-3 .9-3.8 2.3-1.6 2.8-.4 7 1.2 9.3.8 1.1 1.7 2.3 2.9 2.3 1.2 0 1.6-.7 3-.7s1.8.7 3 .7 2-.1 2.9-2.3c.7-1 1.2-2 1.5-3.1-3.5-1.3-2.8-6-1.8-6.3Z" fill="currentColor" />
+                    <path d="M14.4 5.8c.6-.8 1.1-1.9.9-3-1 .1-2.1.7-2.8 1.5-.6.7-1.2 1.9-1 2.9 1.1.1 2.2-.6 2.9-1.4Z" fill="currentColor" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 data-i18n="stores.ios">iPhone</h3>
+                  <p data-i18n="stores.iosMeta">App Store — у планах, не зараз</p>
+                </div>
+                <span class="store-badge" data-i18n="stores.iosBadge">Пізніше</span>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap footer-inner">
+        <div>
+          <strong data-i18n="footer.copy">Keepbay</strong>
+          <div data-i18n="footer.note">Особистий додаток. Видавець — HDA. Спочатку Android, iPhone — пізніше. Покупка в магазині ще не підключена.</div>
+        </div>
+        <div class="footer-links">
+          <a href="../index.html">HDA</a>
+          <a href="../capsa/index.html">Capsa</a>
+          <a href="privacy.html" data-i18n="nav.privacy">Конфіденційність</a>
+          <a href="#trial" data-i18n="nav.trial">Тріал</a>
+        </div>
+      </div>
+    </footer>
+    <script src="../js/main.js"></script>
+  </body>
+</html>
