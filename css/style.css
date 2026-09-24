@@ -2347,20 +2347,6 @@ html[data-theme="light"] .orb-c {
   }
 }
 
-.brand img {
-  animation: mark-tilt 7s ease-in-out infinite;
-}
-
-@keyframes mark-tilt {
-  0%,
-  100% {
-    transform: rotate(0deg);
-  }
-  50% {
-    transform: rotate(-8deg);
-  }
-}
-
 .btn-shine {
   position: relative;
   overflow: hidden;
@@ -2673,7 +2659,6 @@ html[data-theme="light"] .orb-c {
   .desk-float,
   .mock-photo img,
   .pulse,
-  .brand img,
   .btn-shine::after,
   .badge-shine::after,
   .plan.pro,
