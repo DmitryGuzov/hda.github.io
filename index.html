@@ -8,14 +8,37 @@
       name="description"
       content="HDA — ім’я видавця особистих додатків. Не компанія і не студія. Keepbay, Capsa і наступні додатки живуть тут."
     />
+    <meta
+      name="keywords"
+      content="HDA, Keepbay, Capsa, особисті додатки, offline apps, time tracker, vehicle log"
+    />
+    <meta name="author" content="HDA" />
+    <meta name="robots" content="index, follow" />
     <meta name="theme-color" content="#253139" />
-    <meta property="og:title" content="HDA" />
+    <link rel="canonical" href="https://dmitryguzov.github.io/hda.github.io/" />
+    <meta property="og:site_name" content="HDA" />
+    <meta property="og:locale" content="uk_UA" />
+    <meta property="og:locale:alternate" content="en_US" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://dmitryguzov.github.io/hda.github.io/" />
+    <meta property="og:title" content="HDA — особисті додатки" />
     <meta
       property="og:description"
       content="Особисті додатки під ім’ям HDA. Не компанія, не студія — лише видавець у магазині. Keepbay і Capsa."
     />
-    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://dmitryguzov.github.io/hda.github.io/assets/og-hda.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="HDA — особисті додатки" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="HDA — особисті додатки" />
+    <meta
+      name="twitter:description"
+      content="Особисті додатки під ім’ям HDA. Keepbay і Capsa."
+    />
+    <meta name="twitter:image" content="https://dmitryguzov.github.io/hda.github.io/assets/og-hda.png" />
     <link rel="icon" href="assets/hda-mark.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="assets/apple-touch-hda.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -23,6 +46,30 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="manifest" href="site.webmanifest" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebSite",
+            "name": "HDA",
+            "url": "https://dmitryguzov.github.io/hda.github.io/",
+            "description": "HDA — ім’я видавця особистих додатків. Keepbay, Capsa і наступні додатки.",
+            "inLanguage": ["uk", "en"],
+            "publisher": { "@id": "https://dmitryguzov.github.io/hda.github.io/#publisher" }
+          },
+          {
+            "@type": "Organization",
+            "@id": "https://dmitryguzov.github.io/hda.github.io/#publisher",
+            "name": "HDA",
+            "url": "https://dmitryguzov.github.io/hda.github.io/",
+            "logo": "https://dmitryguzov.github.io/hda.github.io/assets/hda-mark.svg",
+            "description": "Publisher name for personal apps — not a registered company."
+          }
+        ]
+      }
+    </script>
   </head>
   <body class="page-v2" data-page="hub">
     <a class="skip" href="#main">Skip</a>
@@ -54,8 +101,8 @@
     <nav class="mobile-nav" id="mobile-nav" aria-hidden="true">
       <a href="#apps" data-i18n="hub.apps">Додатки</a>
       <a href="#about" data-i18n="hub.about">Про HDA</a>
-      <a href="keepbay/index.html">Keepbay</a>
-      <a href="capsa/index.html">Capsa</a>
+      <a href="keepbay/">Keepbay</a>
+      <a href="capsa/">Capsa</a>
     </nav>
 
     <main id="main">
@@ -78,14 +125,14 @@
             <p data-i18n="hub.appsLead">Keepbay і Capsa вже мають сторінки. Інші з’являться тут, коли будуть готові.</p>
           </div>
           <div class="app-grid">
-            <a class="app-card reveal" href="keepbay/index.html">
-              <img src="assets/keepbay-mark.svg" alt="" />
+            <a class="app-card reveal" href="keepbay/">
+              <img src="assets/keepbay-mark.svg" alt="Keepbay" />
               <h3>Keepbay</h3>
               <p data-i18n="hub.keepbayBody">Офлайн-облік авто, витрат, поїздок і нагадувань. Android незабаром, iPhone пізніше.</p>
               <span class="app-card-cta" data-i18n="hub.keepbayCta">Сторінка додатку</span>
             </a>
-            <a class="app-card is-capsa reveal" href="capsa/index.html" style="--d: 0.06s">
-              <img src="assets/capsa-mark.svg" alt="" />
+            <a class="app-card is-capsa reveal" href="capsa/" style="--d: 0.06s">
+              <img src="assets/capsa-mark.svg" alt="Capsa" />
               <h3>Capsa</h3>
               <p data-i18n="hub.capsaBody">Локальний трекер часу для проєктів, задач і заробітку в гривнях. Windows незабаром, macOS і Linux пізніше.</p>
               <span class="app-card-cta" data-i18n="hub.capsaCta">Сторінка додатку</span>
@@ -109,6 +156,24 @@
               </p>
             </div>
           </div>
+          <div class="social-panel reveal" style="--d: 0.06s">
+            <h2 data-i18n="hub.socialTitle">Соцмережі</h2>
+            <p data-i18n="hub.socialLead">Акаунти ще створюються — з’являться тут, коли будуть готові.</p>
+            <div class="social-brands">
+              <div class="social-brand">
+                <strong>HDA</strong>
+                <nav class="social-links" data-social="hda" aria-label="HDA"></nav>
+              </div>
+              <div class="social-brand">
+                <strong>Keepbay</strong>
+                <nav class="social-links" data-social="keepbay" aria-label="Keepbay"></nav>
+              </div>
+              <div class="social-brand">
+                <strong>Capsa</strong>
+                <nav class="social-links" data-social="capsa" aria-label="Capsa"></nav>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </main>
@@ -120,8 +185,8 @@
           <div data-i18n="hub.footerNote">Ім’я видавця, не зареєстрована компанія.</div>
         </div>
         <div class="footer-links">
-          <a href="keepbay/index.html">Keepbay</a>
-          <a href="capsa/index.html">Capsa</a>
+          <a href="keepbay/">Keepbay</a>
+          <a href="capsa/">Capsa</a>
           <a href="keepbay/privacy.html" data-i18n="hub.keepbayPrivacy">Keepbay · конфіденційність</a>
           <a href="capsa/privacy.html" data-i18n="hub.capsaPrivacy">Capsa · конфіденційність</a>
         </div>

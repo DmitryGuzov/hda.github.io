@@ -1,0 +1,23 @@
+{
+  "name": "HDA",
+  "short_name": "HDA",
+  "description": "Personal apps under the HDA name — Keepbay and Capsa.",
+  "start_url": "./",
+  "display": "browser",
+  "background_color": "#253139",
+  "theme_color": "#253139",
+  "lang": "uk",
+  "icons": [
+    {
+      "src": "assets/apple-touch-hda.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/hda-mark.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+# https://dmitryguzov.github.io/hda.github.io/
+User-agent: *
+Allow: /
+
+Sitemap: https://dmitryguzov.github.io/hda.github.io/sitemap.xml

@@ -8,6 +8,27 @@ const DEVICE = {
   iosReady: false,
 };
 
+/** Fill `url` when the account is live. Empty url = shown as “soon”. */
+const SOCIAL = {
+  hda: {
+    instagram: { handle: "hda.apps", url: "" },
+    threads: { handle: "hda.apps", url: "" },
+    facebook: { handle: "hda.apps", url: "" },
+  },
+  keepbay: {
+    instagram: { handle: "keepbay.app", url: "" },
+    threads: { handle: "keepbay.app", url: "" },
+    facebook: { handle: "keepbay.app", url: "" },
+  },
+  capsa: {
+    instagram: { handle: "capsa.app", url: "" },
+    threads: { handle: "capsa.app", url: "" },
+    facebook: { handle: "capsa.app", url: "" },
+  },
+};
+
+const SOCIAL_NETWORKS = ["instagram", "threads", "facebook"];
+
 const I18N = {
   uk: {
     htmlLang: "uk",
@@ -63,6 +84,20 @@ const I18N = {
       aboutBody:
         "Немає ТОВ, ФОП у шапці сайту і «студії». HDA — позначка видавця: так зручніше тримати кілька додатків в одному місці. Юридичні тексти й політика — на сторінці конкретного додатку.",
       footerNote: "Ім’я видавця, не зареєстрована компанія.",
+      socialTitle: "Соцмережі",
+      socialLead: "Акаунти ще створюються — з’являться тут, коли будуть готові.",
+      socialLabel: "Соцмережі HDA",
+      socialSoon: "скоро",
+      socialInstagram: "Instagram",
+      socialThreads: "Threads",
+      socialFacebook: "Facebook",
+    },
+    social: {
+      label: "Соцмережі",
+      soon: "скоро",
+      instagram: "Instagram",
+      threads: "Threads",
+      facebook: "Facebook",
     },
     capsa: {
       title: "Capsa — капсула часу",
@@ -493,6 +528,20 @@ const I18N = {
       aboutBody:
         "There is no registered company in the header, and no “studio”. HDA is a publisher label: a single place for several apps. Legal text and privacy live on each app’s page.",
       footerNote: "A publisher name, not a registered company.",
+      socialTitle: "Social",
+      socialLead: "Accounts are still being set up — they will appear here when ready.",
+      socialLabel: "HDA social links",
+      socialSoon: "soon",
+      socialInstagram: "Instagram",
+      socialThreads: "Threads",
+      socialFacebook: "Facebook",
+    },
+    social: {
+      label: "Social",
+      soon: "soon",
+      instagram: "Instagram",
+      threads: "Threads",
+      facebook: "Facebook",
     },
     capsa: {
       title: "Capsa — a time capsule",
@@ -879,13 +928,68 @@ function get(obj, path) {
   return path.split(".").reduce((acc, key) => (acc == null ? acc : acc[key]), obj);
 }
 
+function socialCopy(lang) {
+  const root = I18N[lang] || I18N.uk;
+  return {
+    label: root.social?.label || "Social",
+    soon: root.social?.soon || "soon",
+    networks: {
+      instagram: root.social?.instagram || "Instagram",
+      threads: root.social?.threads || "Threads",
+      facebook: root.social?.facebook || "Facebook",
+    },
+  };
+}
+
+function renderSocial(lang) {
+  const copy = socialCopy(lang);
+  document.querySelectorAll("[data-social]").forEach((nav) => {
+    const brand = nav.dataset.social;
+    const accounts = SOCIAL[brand];
+    if (!accounts) {
+      nav.hidden = true;
+      return;
+    }
+
+    const brandLabel = brand === "hda" ? "HDA" : brand === "keepbay" ? "Keepbay" : "Capsa";
+    nav.setAttribute("aria-label", `${brandLabel} · ${copy.label}`);
+    nav.innerHTML = "";
+
+    SOCIAL_NETWORKS.forEach((key) => {
+      const account = accounts[key];
+      if (!account) return;
+      const networkName = copy.networks[key] || key;
+      const handle = account.handle;
+      const liveUrl = (account.url || "").trim();
+      const el = document.createElement(liveUrl ? "a" : "span");
+      el.className = "social-link" + (liveUrl ? "" : " is-soon");
+      if (liveUrl) {
+        el.href = liveUrl;
+        el.target = "_blank";
+        el.rel = "noopener noreferrer me";
+        el.setAttribute("aria-label", `${networkName} · @${handle}`);
+      } else {
+        el.setAttribute(
+          "aria-label",
+          `${networkName} · @${handle} · ${copy.soon}`,
+        );
+        el.title = `${networkName} @${handle} — ${copy.soon}`;
+      }
+      el.innerHTML = `<span class="social-network">${networkName}</span><span class="social-handle">@${handle}</span>${
+        liveUrl ? "" : `<span class="social-soon">${copy.soon}</span>`
+      }`;
+      nav.appendChild(el);
+    });
+  });
+}
+
 function applyI18n(lang) {
   const root = I18N[lang] || I18N.uk;
   const page = document.body.dataset.page;
   const isCapsa = page === "capsa" || page === "capsa-privacy";
   const dict = isCapsa ? { ...root, ...root.capsa, htmlLang: root.htmlLang } : root;
   document.documentElement.lang = dict.htmlLang;
-  document.title =
+  const docTitle =
     page === "privacy"
       ? `${dict.legal.title} — Keepbay`
       : page === "capsa-privacy"
@@ -893,17 +997,28 @@ function applyI18n(lang) {
         : page === "hub"
           ? dict.hub.docTitle
           : dict.title;
+  const docDescription =
+    page === "privacy" || page === "capsa-privacy"
+      ? dict.legal.intro
+      : page === "hub"
+        ? dict.hub.description
+        : dict.description;
+
+  document.title = docTitle;
   const meta = document.querySelector('meta[name="description"]');
-  if (meta) {
-    meta.setAttribute(
-      "content",
-      page === "privacy" || page === "capsa-privacy"
-        ? dict.legal.intro
-        : page === "hub"
-          ? dict.hub.description
-          : dict.description,
-    );
-  }
+  if (meta) meta.setAttribute("content", docDescription);
+
+  const setMeta = (selector, content) => {
+    const el = document.querySelector(selector);
+    if (el) el.setAttribute("content", content);
+  };
+  setMeta('meta[property="og:title"]', docTitle);
+  setMeta('meta[property="og:description"]', docDescription);
+  setMeta('meta[property="og:locale"]', lang === "en" ? "en_US" : "uk_UA");
+  setMeta('meta[name="twitter:title"]', docTitle);
+  setMeta('meta[name="twitter:description"]', docDescription);
+
+  renderSocial(lang);
 
   document.querySelectorAll("[data-i18n]").forEach((el) => {
     const value = get(dict, el.dataset.i18n);
