@@ -4,7 +4,8 @@
 
 Цей репозиторій — статичний сайт (GitHub Pages) зі сторінками додатків і політикою конфіденційності.
 
-**Сайт:** [https://dmitryguzov.github.io/hda.github.io/](https://dmitryguzov.github.io/hda.github.io/)
+**Сайт:** [https://dmitryguzov.github.io/hda.github.io/](https://dmitryguzov.github.io/hda.github.io/)  
+Зараз у staging: `robots.txt` Disallow + `noindex` на сторінках (пошуковики не індексують; хто знає URL — може відкрити).
 
 ---
 
@@ -14,7 +15,8 @@ Personal apps under the HDA name. Not a company or a studio — just the publish
 
 This repository is a static site (GitHub Pages) with app landing pages and privacy policies.
 
-**Live:** [https://dmitryguzov.github.io/hda.github.io/](https://dmitryguzov.github.io/hda.github.io/)
+**Live:** [https://dmitryguzov.github.io/hda.github.io/](https://dmitryguzov.github.io/hda.github.io/)  
+Currently staging: `robots.txt` Disallow + `noindex` on pages (not indexed; anyone with the URL can still open it).
 
 ---
 

@@ -1,5 +1,4 @@
+# Staging: do not index. Flip to Allow + Sitemap when going public.
 # https://dmitryguzov.github.io/hda.github.io/
 User-agent: *
-Allow: /
-
-Sitemap: https://dmitryguzov.github.io/hda.github.io/sitemap.xml
+Disallow: /
