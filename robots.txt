@@ -1,4 +1,7 @@
-# Staging: do not index. Flip to Allow + Sitemap when going public.
+# Staging: do not index the site. The privacy policy must stay fetchable
+# so a store can open the URL. Flip to Allow + Sitemap when going public.
 # https://dmitryguzov.github.io/hda.github.io/
 User-agent: *
+Allow: /hda.github.io/keepbay/privacy.html
+Allow: /hda.github.io/privacy.html
 Disallow: /
