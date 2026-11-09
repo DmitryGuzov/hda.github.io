@@ -21,6 +21,11 @@
     <priority>0.4</priority>
   </url>
   <url>
+    <loc>https://dmitryguzov.github.io/hda.github.io/keepbay/terms.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
     <loc>https://dmitryguzov.github.io/hda.github.io/capsa/privacy.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.4</priority>
